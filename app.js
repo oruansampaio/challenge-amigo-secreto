@@ -16,3 +16,14 @@ function adicionarAmigo() {
     inputElement.value = "";
 }
 
+function atualizarLista() {
+    let listaElement = document.getElementById("listaAmigos");
+    listaElement.innerHTML = "";
+
+    amigos.forEach((amigo) => {
+        let li = document.createElement("li");
+        li.textContent = amigo;
+        listaElement.appendChild(li);
+    });
+}
+
